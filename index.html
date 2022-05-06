@@ -5,23 +5,23 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-        <link rel="stylesheet" href="/assets/style.css"/>
+        <link rel="stylesheet" href="./assets/style.css">
         <title>Floyd's Music Search</title>
     </head>
     <body>
         <nav>
             <!-- website name/logo link to homepage, there is only one page, at the moment though...-->
-            <div ><h1><a href="/">Floyd's Music Search</a></h1></div>
+            <div ><h1 id="site-name"><a href="/">Floyd's Music Search</a></h1></div>
             <div class="nav-bar">
                 <ul>
                     <li>
-                      <a href="#"> About This Website </a>
+                      <a href="#about"> About This Website </a>
                     </li>
                     <li>
-                      <a href="#">  Search! </a>
+                      <a href="#search">  Search! </a>
                     </li>
                     <li>
-                      <a href="#">  Contact Me </a>
+                      <a href="#contact-me">  Contact Me </a>
                     </li>    
                </ul>
             </div>        
@@ -41,15 +41,15 @@
             <div id="search" class="search-bar">
                 <form>
                     <label for="search-field">Search for Music Here!</label>
-                    <input type="text" id="search-field" placeholder="(Album, Song, Artist, Year)"/>
-                    <button type="submit" class="btn"> Search </button>
+                    <input type="search" name="search" id="search-field" placeholder="(Album, Song, Artist, Year)"/>
+                    <button type="submit" class="btn" name="submit" value="For Music"> Search </button>
                 </form>
             </div>
             <div id="Previous Searches">
                <h3> Your previous searches: </h3>
             </div>
             <div id="results-container">
-                <button class="btn" type="reset" id="clear-results"></button>
+                <button class="btn" type="reset" id="clear-results">Clear Results</button>
             </div>
         </main>
         <footer id="contact-me">
@@ -58,8 +58,8 @@
             <address>
                 Phone: <a href="tel:408.656.8877">1+(408) 656-8877</a> <br />
                 Email: <a href="mailto://floydjulian1991@gmail.com">floydjulian1991@gmail.com</a><br />
-                GitHub: <a targer="_blank" href="https://github.com/Jflo919">Julian's GitHub Profile</a><br />
-                LinkedIn: <!--Fill this in later-->
+                GitHub: <a target="_blank" href="https://github.com/Jflo919">Julian's GitHub Profile</a><br />
+                LinkedIn: <!--Fill this in later--> <br />
                 Portfolio: <!--Fill this in later-->
             </address>
         </footer>

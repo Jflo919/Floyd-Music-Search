@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    color: hsl(100, 10%, 05%);
+}
+
+#site-name a {
+     text-decoration: none;
+     color:hsl(100, 10%, 05%);
+           
+}
+
+nav {
+    min-height: 15vmin;
+    min-width:  100vmin;
+    padding: auto;
+     
+}
+

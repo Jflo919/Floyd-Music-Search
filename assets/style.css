@@ -11,14 +11,41 @@ body {
 
 #site-name a {
      text-decoration: none;
+     background-color: aliceblue ;
      color:hsl(100, 10%, 05%);
-           
+     font-size: 2em;
+     opacity: .88;           
 }
 
 nav {
-    min-height: 15vmin;
-    min-width:  100vmin;
+    min-height: 20vmin;
+    max-width:  100vmax;
     padding: auto;
-     
+    background-image: url(./images/pexels-miguel-á-padriñán-167092.jpg);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    justify-content: center;   
+    align-items:  center;
+    gap: 1rem;
+    
 }
 
+.nav-bar ul {
+    list-style: none;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    background-color: aliceblue;
+    color:hsl(100, 10%, 05%);
+    font-size: 20px;
+    opacity: .88;
+    gap: .5rem;
+
+}
+
+.nav-bar ul li a:hover {
+    
+}

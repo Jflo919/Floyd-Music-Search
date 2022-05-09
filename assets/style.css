@@ -14,7 +14,9 @@ body {
      background-color: aliceblue ;
      color:hsl(100, 10%, 05%);
      font-size: 2em;
-     opacity: .88;           
+     opacity: .88;  
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+         
 }
 
 nav {
@@ -43,9 +45,29 @@ nav {
     font-size: 20px;
     opacity: .88;
     gap: .5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
 }
 
 .nav-bar ul li a:hover {
+    background-color:hsl(100, 10%, 05%);
+    color:aliceblue;       
+}
+
+ main h2{
+    background-color: aliceblue;
+    width:fit-content;
+    opacity: .95;
+}    
+
+#hero {
+    background-image: url(./images/pexels-cottonbro-3693097.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px;
+    margin: 50px;
+    background-position: 80%;
     
+    
+
 }

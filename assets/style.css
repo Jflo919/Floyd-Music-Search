@@ -62,7 +62,7 @@ nav {
 }
 
  main h2{
-    background-color: aliceblue;
+    
     width:fit-content;
     opacity: .95;
     
@@ -86,6 +86,7 @@ nav {
  /* Dynamically change the jumbo-text opacity to a visible value, later on when searching?*/
 #jumbo-text {
     opacity: 0;
+    background-color: aliceblue;
 }
 
 #about {
@@ -95,4 +96,11 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    background: linear-gradient(70deg, white, black, rgb(0,0, 0));
+    color: white;
+}
+
+#about p {
+    color: white;
+    font-size: 20px;
 }

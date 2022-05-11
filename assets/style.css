@@ -19,6 +19,12 @@ body {
          
 }
 
+#site-name:hover {
+    transform: scale(1.5);
+    background-color: hsl(100, 10%, 05%);
+    color:aliceblue;
+}
+
 nav {
     min-height: 20vmin;
     max-width:  100vmax;
@@ -51,13 +57,16 @@ nav {
 
 .nav-bar ul li a:hover {
     background-color:hsl(100, 10%, 05%);
-    color:aliceblue;       
+    color:aliceblue;
+    transform: scale(2.1);       
 }
 
  main h2{
     background-color: aliceblue;
     width:fit-content;
     opacity: .95;
+    
+
 }    
 
 #hero {
@@ -67,7 +76,23 @@ nav {
     padding: 100px;
     margin: 50px;
     background-position: 80%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    opacity: 0.5;
+    border: solid black 1px;
     
     
 
+}
+ /* Dynamically change the jumbo-text opacity to a visible value, later on when searching?*/
+#jumbo-text {
+    opacity: 0;
+}
+
+#about {
+    padding: 50px;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }

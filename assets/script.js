@@ -5,7 +5,13 @@
  let submitBtnEl = document.getElementById("submit-btn");
  let clearBtnEl = document.getElementById("clear-results");
 
-
+// discogs data.results[].title = title
+// discogs data.results[].id = id
+// discogs data.results[].label = label
+// discogs data.results[].genre = genre
+// discogs data.results[].format = formats
+// discogs data.results[].thumb = thumbnail image
+// discogs data.results[].year = year of release
 
  
 
@@ -15,18 +21,27 @@
 // fetch api data based on search input, use api key with appropriate query and pagination parameters, etc.
     var getMusicData = function (music) {
         // "music is a parameter that will be replaced when called in the submit button eventhandler."
-        var discogsUrl = "https://api.discogs.com/database/search?q=Nirvana&token=rtZFkbTuxtASTDgIPiCnrQApzZQfZflVQXSnoZkb";
+        var discogsUrl = "https://api.discogs.com/database/search?q=&"+ music +"page=10&per_page=25&token=rtZFkbTuxtASTDgIPiCnrQApzZQfZflVQXSnoZkb";
         fetch(discogsUrl).then(function (response) {
             response.json().then(function(data) {
                 console.log(data);
-            })
-        })
-    }
+                if (data.results.length === 0) {
+                    alert(error); // do I need to change error to string with error message?
+                } else {
+                    // display music function called here with data passed as argument.
+                }
+            });
+        });
+    };
     // error handling to be added above or below, not sure.
 // function to clear previous searches
 
 // Add eventListener or handler for search button, call top two functions
-
+    submitBtnEl.addEventListener("click", function(e) {
+        e.preventDefault();
+        console.log('button was clicked');
+        getMusicData(/*pass search text as argument*/)
+    })
 // Add eventListener or handler for  the clear searches button
 
 // set previous searches to localStorage

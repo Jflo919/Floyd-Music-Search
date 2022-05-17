@@ -16,7 +16,14 @@
  
 
 // upon click, function to render render fetched music data to results-containerEl, display function
+    var displaySearchResults = function () {
+        resultsContainerEl.setAttribute("style", "width: 500px;");          // Rewrite this using DRY principle, you could make this into fewer lines of code.
+        resultsContainerEl.setAttribute("style", "height: 700px;");
+        resultsContainerEl.setAttribute("style", "display: flex;");
+        resultsContainerEl.setAttribute("style", "flex-direction: column;");
+        // create new document.create elements such as headings, cards, imgs, etc. that will all be appended by the results container el and by their parents.
 
+    }
 
 // fetch api data based on search input, use api key with appropriate query and pagination parameters, etc.
     var getMusicData = function (music) {

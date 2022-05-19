@@ -143,14 +143,32 @@ nav {
     width: 55vw;
     max-height: 500px;
     max-width: 500px;
+    animation-name: record;
+    animation-duration: 9s;
+    
 }
-.tone-arm {
+/*.tone-arm {
     background-color: black;
     width: 42%;
     height: 2px;
     position: absolute;
-    top: 33%;
-    left: 89%;
+    top: 15%;
+    left: 79%;
     transform: rotate(-50deg);
+}
+    */  
+
+@keyframes record {
+    0%{ 
+        transform: rotate(0deg);
+        background: linear-gradient(70deg, white, black, rgb(0, 0, 0));
+    }
+    50% {
+        background: linear-gradient(45deg, black, black, rgb(255, 255, 255));
+    }
+    100% {
+        background:rgb(0, 0, 0);
+        transform: rotate(360deg);
+    }
 }
 /* media queries for smaller screen responsiveness goes below*/

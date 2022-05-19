@@ -131,3 +131,26 @@ nav {
 #results-container {
     
 }
+
+#contact-me {}
+
+.record {
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 50px;
+    position: absolute;
+    height: 55vw;
+    width: 55vw;
+    max-height: 500px;
+    max-width: 500px;
+}
+.tone-arm {
+    background-color: black;
+    width: 42%;
+    height: 2px;
+    position: absolute;
+    top: 33%;
+    left: 89%;
+    transform: rotate(-50deg);
+}
+/* media queries for smaller screen responsiveness goes below*/

@@ -27,7 +27,7 @@
 
 // fetch api data based on search input, use api key with appropriate query and pagination parameters, etc.
     var getMusicData = function (music) {
-        // "music is a parameter that will be replaced when called in the submit button eventhandler."
+        // "music is a parameter that will be replaced when called with argument in the submit button eventhandler."
         var discogsUrl = "https://api.discogs.com/database/search?q=&"+ music +"page=10&per_page=25&token=rtZFkbTuxtASTDgIPiCnrQApzZQfZflVQXSnoZkb";
         fetch(discogsUrl).then(function (response) {
             response.json().then(function(data) {

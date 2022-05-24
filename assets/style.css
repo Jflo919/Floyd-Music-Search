@@ -145,6 +145,8 @@ nav {
     max-width: 500px;
     animation-name: record;
     animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
     
 }
 /*.tone-arm {

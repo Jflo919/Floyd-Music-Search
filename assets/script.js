@@ -17,39 +17,58 @@ let clearBtnEl = document.getElementById("clear-results");
  
 
 // upon click, function to render render fetched music data to results-containerEl, display function
-var displaySearchResults = function () {
-    resultsContainerEl.setAttribute("style", "width: 500px;");          // Rewrite this using DRY principle, you could make this into fewer lines of code.
+var displaySearchResults = function (data) {
+    resultsContainerEl.setAttribute("style", "width: 500px;");         
     resultsContainerEl.setAttribute("style", "height: 700px;");
     resultsContainerEl.setAttribute("style", "display: flex;");
     resultsContainerEl.setAttribute("style", "flex-direction: column;");
+
+    
+    for (let i = 0; i < data.length; i++) {
+        if (data.results > 0) {
+            // id
+            let id = data.results[i].id;
+            let resultsCard = document.createElement('div');
+            resultsCard.setAttribute("style", "border: solid black 2px;");
+        // artist
+            let type = data.results[i].type;
+            let typeHeading = document.createElement("h4");
+            typeHeading.innerHTML = "type: " + type;
+            typeHeading.setAttribute("style", "font-weight: bold;");
+
+            resultsContainerEl.appendChild(resultsCard);
+            resultsCard.appendChild(typeHeading);
+        }
+    }
     // create new document.create elements such as headings, cards, imgs, etc. that will all be appended by the results container el and by their parents.
 
 };
 
-// fetch api data based on search input, use api key with appropriate query and pagination parameters, etc.
+
 var getMusicData = function (music) {
     // "music is a parameter that will be replaced when called with argument in the submit button eventhandler."
-    var discogsUrl = "https://api.discogs.com/database/search?q="+ music +"&page=10&per_page=25&token=rtZFkbTuxtASTDgIPiCnrQApzZQfZflVQXSnoZkb";
+    var discogsUrl = "https://api.discogs.com/database/search?q="+ music +"&page=1&per_page=10&type=artist&token=rtZFkbTuxtASTDgIPiCnrQApzZQfZflVQXSnoZkb";
     fetch(discogsUrl).then(function (response) {
         if (!response.ok) {
             throw Error("ERROR");
         }
       response.json().then(function(data) {
-      console.log(data);  // try data.data, then clean up comments
+      console.log(data);
+      displaySearchResults(data);  
       })
       .catch(function (error) {
           console.log(error)
       
-      if (data.results.length === 0) {
-            alert(error); // do I need to change error to string with error message?
+     // if (data.results.length === 0) {
+        //     alert(error); 
 
-        } else {
-            displaySearchResults(data);        // display music function called here with data passed as argument.
-            }
+        // }
+                   
+            
         });
     });
 };
-    // error handling to be added above or below, not sure.
+    
 // function to clear previous searches
 
 // Add eventListener or handler for search button, call top two functions
@@ -73,5 +92,3 @@ submitBtnEl.addEventListener("click", function(e) {
 
 // get localStorage on page load
 
-// just to see api data in console log, below.
-getMusicData();
